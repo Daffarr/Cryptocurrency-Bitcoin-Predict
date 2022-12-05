@@ -30,7 +30,7 @@ Tujuan dibuatnya proyek ini adalah sebagai berikut:
 ### *Solution Statements*
 Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
 - Melakukan analisa pada data untuk dapat memahami data yang ada dengan menerapkan teknik visualisasi data. Analisa yang dapat dilakukan yaitu, antara lain:
-  - Menangani missing value pada *dataset*.
+  - Menangani *missing value* pada *dataset*.
   - Memeriksa korelasi antar *dataset* penting untuk memahami hubungan data target dan data fitur.
 - Melakukan pemrosesan pada data seperti:
   - Mengatasi *outlier* pada *dataset* dengan menerapkan *IQR Method*.
