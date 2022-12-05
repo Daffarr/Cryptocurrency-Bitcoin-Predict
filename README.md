@@ -72,7 +72,7 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
 
   Setelah melakukan penanganan *Outlier*, data yang ada di dalam *dataset* akan berkurang menjadi **2696 data**, karena data yang termasuk dalam *outlier* akan dihapus menggunakan *IQR Method*. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data *outlier* masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data *outlier* yang ada agar tidak mengurangi keberagaman dari *dataset* yang digunakan.
   
- <img src="https://user-images.githubusercontent.com/77198942/205610755-2a164f9c-c8c5-4ea1-8054-9af3da491d4c.png" style="background-color:#FFFF" width="500"/>
+  <img src="https://user-images.githubusercontent.com/77198942/205610755-2a164f9c-c8c5-4ea1-8054-9af3da491d4c.png" style="background-color:#FFFF" width="500"/>
 
 - ***Unvariate Analysis***
 
@@ -88,7 +88,7 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
 
   Disini dapat kita lihat secara detail korelasinya nya menggunakan angka, dapat kita lihat rata-rata korelasi yang ada dari fitur *Close* dengan fitur lain seperti *High, Low, Open* dan *Marketcap* itu mencapai angka 0.81, sedangkan volume mencapai angka 0.78, oleh karena itu dapat memungkinkan kita untuk menghapus fitur volume pada *dataset* ini.
   
-  <img src="https://user-images.githubusercontent.com/77198942/205610892-c939e4d3-c17f-42e8-8315-30dcdbb57543.png" style="background-color:#FFFF" width="500"/>
+   <img src="https://user-images.githubusercontent.com/77198942/205610892-c939e4d3-c17f-42e8-8315-30dcdbb57543.png" style="background-color:#FFFF" width="500"/>
 
 ## *Data Preparation*
 Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan model:
