@@ -119,7 +119,10 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
 
 - ***Support Vector Regression* (*SVR*)**
 
-  Algoritma *supervised learning* yang berguna untuk memprediksi dari nilai kontinu. tujuan dasarnya digunakan untuk menentukan garis keputusan yang sesuai. *SVR* akan mencoba menyesuaikan garis yang paling baik dalam nilai ambang batas.
+  Algoritma *supervised learning* yang berguna untuk memprediksi dari nilai kontinu. tujuan dasarnya digunakan untuk menentukan garis keputusan yang sesuai. *SVR* akan mencoba menyesuaikan garis yang paling baik dalam nilai ambang batas. Untuk hyper parameter yang digunakan pada model ini adalah sebagai berikut :
+  - *`kernel`* = *`rfr`*, Parameter ini merupakan metode yang digunakan untuk mengambil data sebagai input dan mengubahnya menjadi bentuk pemrosesan data yang diperlukan.
+  - *`C`* = `100000`, Parameter C menukar klasifikasi yang benar dari contoh pelatihan terhadap maksimalisasi *margin* fungsi keputusan. Untuk nilai C yang lebih besar, *margin* yang lebih kecil akan diterima jika fungsi keputusan lebih baik dalam mengklasifikasikan semua titik pelatihan dengan benar. C yang lebih rendah akan mendorong *margin* yang lebih besar, oleh karena itu fungsi keputusan yang lebih sederhana, dengan mengorbankan akurasi pelatihan. Dengan kata lain C berperilaku sebagai parameter regularisasi dalam *SVR*.
+  - *`gamma`* = `0.3`, Secara intuitif, parameter *gamma* menentukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti 'jauh' dan nilai tinggi berarti 'dekat'. Parameter *gamma* dapat dilihat sebagai kebalikan dari radius pengaruh sampel yang dipilih oleh model sebagai vektor pendukung.
 
   Kelebihan:
   - Model keputusan mudah untuk diperbarui.
@@ -134,11 +137,14 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
 
 - ***Random Forest Regression* (*RFR*)**
 
-  Merupakan Algoritma yang fleksibel dan mudah untuk digunakan. “*Forest*” yang dibangunnya adalah kumpulan *decision tree*, biasanya dilatih dengan metode “*bagging*”. Ide umum dari metode *bagging* adalah kombinasi model pembelajaran meningkatkan hasil keseluruhan.
+  Merupakan Algoritma yang fleksibel dan mudah untuk digunakan. “*Forest*” yang dibangunnya adalah kumpulan *decision tree*, biasanya dilatih dengan metode “*bagging*”. Ide umum dari metode *bagging* adalah kombinasi model pembelajaran meningkatkan hasil keseluruhan. Untuk hyperparameter yang digunakan pada model ini adalah sebagai berikut:
+  - *`n_estimator`* = `6` jumlah *trees* (pohon) di *forest*.
+  - *`max_depth`* = `16` kedalaman atau panjang pohon. Ia merupakan ukuran seberapa banyak pohon dapat membelah (*splitting*) untuk membagi setiap *node* ke dalam jumlah pengamatan yang diinginkan.
 
 - ***K-Nearest Neighbours* (*KNN*)**
 
-  Algoritma *KNN* merupakan algoritma klasifikasi yang bekerja dengan mengambil sejumlah K data terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru. Algoritma ini mengklasifikasikan data berdasarkan kesamaan atau kemiripan atau kedekatannya terhadap data lainnya. Algoritma *KNN* digunakan untuk klasifikasi dan regresi. Pada pembuatan model ini akan menggunaka modul *KNN* yang terlah di sediakan oleh *library *scikit-learn**.  
+  Algoritma *KNN* merupakan algoritma klasifikasi yang bekerja dengan mengambil sejumlah K data terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru. Algoritma ini mengklasifikasikan data berdasarkan kesamaan atau kemiripan atau kedekatannya terhadap data lainnya. Algoritma *KNN* digunakan untuk klasifikasi dan regresi. Pada pembuatan model ini akan menggunaka modul *KNN* yang terlah di sediakan oleh *library scikit-learn*. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
+  - *`n_neighbors`* = `7` Jumlah tetangga untuk yang diperlukan untuk menentukan letak data baru.
   
   Cara kerja Algoritma *KNN* secara umum :
   - Tentukan jumlah tetangga (K) yang akan digunakan untuk pertimbangan penentuan kelas.
