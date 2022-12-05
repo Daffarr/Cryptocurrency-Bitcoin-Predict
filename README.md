@@ -43,7 +43,7 @@ Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
 - Membangun model yang dapat memprediksi bilangan kontinu sesuai dengan permasalahan yang ingin diselesaikan. Beberapa algoritma yang akan digunakan pada model regresi proyek ini yaitu, sebagai berikut:
   - Support Vector Regression (SVR)
   - K-Nearest Neighbours (KNN)
-  - Random Forest (RF)
+  - Random Forest Regression (RFR)
 - Menerapkan teknik Grid Search untuk mendapatkan parameter-parameter dengan performa terbaik pada masing-masing model.
 
 ## Data Understanding
@@ -137,11 +137,11 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
   - Jika jumlah fitur untuk setiap titik data melebihi jumlah sampel data pelatihan, SVR berperforma buruk.
   - Model keputusan tidak berkinerja sangat baik ketika kumpulan data memiliki lebih banyak noise
 
-- **Random Forest (RF)**
+- **Random Forest Regression (RFR)**
 
   Merupakan Algoritma yang fleksibel dan mudah untuk digunakan. “Forest” yang dibangunnya adalah kumpulan decision tree, biasanya dilatih dengan metode “bagging”. Ide umum dari metode bagging adalah kombinasi model pembelajaran meningkatkan hasil keseluruhan.
   
-Model dengan solusi terbaik pada proyek ini adalah Support Vector Regression (SVR). Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya **(K-Nearest Neighbours (KNN) & Random Forest (RF))**
+Model dengan solusi terbaik pada proyek ini adalah Support Vector Regression (SVR). Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya **(K-Nearest Neighbours (KNN) & Random Forest Regression (RFR))**
 
 # Evaluasi
 Evaluasi untuk proyek machine learning kali ini akan menggunakan metrik evaluasi Mean Squared Error(MSE). MSE terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur error. Analisis yang menghasilkan nilai MSE terkecil akan menghasilkan model terbaik.
@@ -157,4 +157,4 @@ Setelah melakukan evaluasi menggunakan metrik mean squared error pada model deng
 
 ![image](https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Hasil%20Metrik%20mean_squared_error.png)
 
-Dari 3 model yang telah dijalankan, dapat dilihat dari visulisasi diatas bahwa MSE pada model **Support Vector Regression (SVM)** merupakan MSE yang paling rendah dari kedua model lainnya **(K-Nearest Neighbours (KNN) & Random Forest (RF))**, selain itu jumlah error pada saat pengujian tidak berbeda jauh dengan error pada saat pelatihan. Hasil ini dapat digunakan untuk membantu para trader khusunya pengguna kripto bitcoin Indonesia dalam melakukan transaksi di dalam dunia kripto.
+Dari 3 model yang telah dijalankan, dapat dilihat dari visulisasi diatas bahwa MSE pada model **Support Vector Regression (SVM)** merupakan MSE yang paling rendah dari kedua model lainnya **(K-Nearest Neighbours (KNN) & Random Forest Regression (RFR))**, selain itu jumlah error pada saat pengujian tidak berbeda jauh dengan error pada saat pelatihan. Hasil ini dapat digunakan untuk membantu para trader khusunya pengguna kripto bitcoin Indonesia dalam melakukan transaksi di dalam dunia kripto.
