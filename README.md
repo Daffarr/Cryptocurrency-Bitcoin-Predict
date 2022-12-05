@@ -163,6 +163,6 @@ Dimana :
 
 Setelah melakukan evaluasi menggunakan metrik mean squared error pada model dengan menggunakan data uji didapatkan hasil sebagai berikut:
 
-![image](https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Hasil%20Metrik%20mean_squared_error.png)
+![image](https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Metrik%20mean_squared_error.png)
 
 Dari 3 model yang telah dijalankan, dapat dilihat dari visulisasi diatas bahwa MSE pada model **Support Vector Regression (SVM)** merupakan MSE yang paling rendah dari kedua model lainnya **(K-Nearest Neighbours (KNN) & Random Forest Regression (RFR))**, selain itu jumlah error pada saat pengujian tidak berbeda jauh dengan error pada saat pelatihan. Hasil ini dapat digunakan untuk membantu para trader khusunya pengguna kripto bitcoin Indonesia dalam melakukan transaksi di dalam dunia kripto.
