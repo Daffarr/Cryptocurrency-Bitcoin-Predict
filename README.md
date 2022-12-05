@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Daffa Rayhan Riadi
+# Bitcoin Predict - Daffa Rayhan Riadi
 
 ## Project Overview
 
