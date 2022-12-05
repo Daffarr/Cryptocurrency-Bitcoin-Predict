@@ -35,11 +35,11 @@ Tujuan dibuatnya proyek ini adalah sebagai berikut:
 ## Solution statements
 Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
 - Melakukan analisa pada data untuk dapat memahami data yang ada dengan menerapkan teknik visualisasi data. Analisa yang dapat dilakukan yaitu, antara lain:
-  - Menangani missing value pada dataset.
-  - Memeriksa korelasi antar dataset penting untuk memahami hubungan data target dan data fitur.
+  - Menangani missing value pada *dataset*.
+  - Memeriksa korelasi antar *dataset* penting untuk memahami hubungan data target dan data fitur.
 - Melakukan pemrosesan pada data seperti:
-  - Mengatasi *outlier* pada dataset dengan menerapkan *IQR Method*.
-  - Normalisasi dataset yang ada pada fitur numerik.
+  - Mengatasi *outlier* pada *dataset* dengan menerapkan *IQR Method*.
+  - Normalisasi *dataset* yang ada pada fitur numerik.
 - Membangun model yang dapat memprediksi bilangan kontinu sesuai dengan permasalahan yang ingin diselesaikan. Beberapa algoritma yang akan digunakan pada model regresi proyek ini yaitu, sebagai berikut:
   - *Support Vector Regression* (*SVR*)
   - *Random Forest Regression* (*RFR*)
@@ -47,41 +47,41 @@ Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
 - Menerapkan teknik *Grid Search* untuk mendapatkan parameter-parameter dengan performa terbaik pada masing-masing model.
 
 ## *Data Understanding*
-Sesuai dengan Domain Proyek diatas, dataset yang digunakan disini adalah dataset mata uang **Bitcoin**. Dataset ini diambil dari platform [Kaggle](https://www.kaggle.com/). Dataset ini berformat ***CSV*** memiliki **2991 baris dan 10 kolom** sample data, yang dimana nanti **1 kolom** akan menjadi **target yaitu kolom *Close***. Dataset tersebut dapat di unduh di website kaggle berikut: [*Cryptocurrency Historical Prices*](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory?select=coin_Bitcoin.csv).
+Sesuai dengan Domain Proyek diatas, *dataset* yang digunakan disini adalah *dataset* mata uang **Bitcoin**. *Dataset* ini diambil dari platform [Kaggle](https://www.kaggle.com/). *Dataset* ini berformat ***CSV*** memiliki **2991 baris dan 10 kolom** sample data, yang dimana nanti **1 kolom** akan menjadi **target yaitu kolom *Close***. *Dataset* tersebut dapat di unduh di website kaggle berikut: [*Cryptocurrency Historical Prices*](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory?select=coin_Bitcoin.csv).
 
-Pada penjelasan diatas disebutkan bahwa dataset ini memiliki 10 kolom sample sebagai berikut:
-- 1 kolom data yang memiliki tipe data ***Integer*** yaitu **(SNo)**.
-- 3 kolom data yang memiliki tipe data ***Object* atau *String*** yaitu ***(Name, Symbol, Date)***.
-- 6 kolom data yang memiliki tipe data ***Float*** yaitu ***(High, Low, Open, Close, Volume, Marketcap)***.
-- Tidak terdapat missing value pada dataset.
+Pada penjelasan diatas disebutkan bahwa *dataset* ini memiliki 10 kolom sample sebagai berikut:
+- 1 kolom data yang memiliki tipe data ***Integer*** yaitu **(*SNo*)**.
+- 3 kolom data yang memiliki tipe data ***Object* atau *String*** yaitu **(*Name, Symbol, Date*)**.
+- 6 kolom data yang memiliki tipe data ***Float*** yaitu **(*High, Low, Open, Close, Volume, Marketcap*)**.
+- Tidak terdapat missing value pada *dataset*.
 
-Variabel-variabel pada *Cryptocurrency Historical Prices* dataset adalah sebagai berikut:
-- **SNo**: Nomor Seri atau Nomor Baris Pada Dataset.
-- **Name**: Nama Mata Uang Kripto.
-- **Symbol**: Simbol Mata Uang Kripto.
-- **Date**: Tanggal Observasi.
-- **Open**: Harga Pembukaan Pada Hari Tertentu.
-- **High**t: Harga Tertinggi Pada Hari Tertentu.
-- **Low**: Harga Terendang Pada Hari Tertentu.
-- **Close**: Harga Penutup Pada Hari Tertentu.
-- **Volume**: Jumlah Transaksi Pada Hari Tertentu.
-- **Marketcap**: Kapitalisasi Pasar Dalam USD.
+Variabel-variabel pada *Cryptocurrency Historical Prices* *dataset* adalah sebagai berikut:
+- ***SNo***: Nomor Seri atau Nomor Baris Pada *Dataset*.
+- ***Name***: Nama Mata Uang Kripto.
+- ***Symbol***: Simbol Mata Uang Kripto.
+- ***Date***: Tanggal Observasi.
+- ***Open***: Harga Pembukaan Pada Hari Tertentu.
+- ***High***t: Harga Tertinggi Pada Hari Tertentu.
+- ***Low***: Harga Terendang Pada Hari Tertentu.
+- ***Close***: Harga Penutup Pada Hari Tertentu.
+- ***Volume***: Jumlah Transaksi Pada Hari Tertentu.
+- ***Marketcap***: Kapitalisasi Pasar Dalam *USD*.
 
 Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada data untuk mengetahui keadaan pada data seperti korelasi antar fitur dan *outlier* pada data. Berikut visualisasi data yang menunjukkan korelasi atar fitur dan *outlier* pada data:
 
 - **Data *Outlier***
 
-  Dapat dilihat pada visualisasi dibawah ini, dataset memiliki data *outlier* yang cukup banyak, maka untuk menghandle data *outlier* tersebut pada dataset ini akan menggunakan *IQR Method* yaitu dengan menghapus data yang berada diluar *interquartile range*. *Interquartile* sendiri adalah *range* yang berada diantara kuartil pertama(25%) dan kuartil ketiga(75%).
+  Dapat dilihat pada visualisasi dibawah ini, *dataset* memiliki data *outlier* yang cukup banyak, maka untuk menghandle data *outlier* tersebut pada *dataset* ini akan menggunakan *IQR Method* yaitu dengan menghapus data yang berada diluar *interquartile range*. *Interquartile* sendiri adalah *range* yang berada diantara kuartil pertama(25%) dan kuartil ketiga(75%).
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Outlier.png' style='background-color: #FFFFFF;' width= 500/>
   
-  Setelah melakukan penanganan *Outlier*, data yang ada di dalam dataset akan berkurang menjadi **2696 data**, karena data yang termasuk dalam *outlier* akan dihapus menggunakan *IQR Method*. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data *outlier* masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data *outlier* yang ada agar tidak mengurangi keberagaman dari dataset yang digunakan.
+  Setelah melakukan penanganan *Outlier*, data yang ada di dalam *dataset* akan berkurang menjadi **2696 data**, karena data yang termasuk dalam *outlier* akan dihapus menggunakan *IQR Method*. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data *outlier* masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data *outlier* yang ada agar tidak mengurangi keberagaman dari *dataset* yang digunakan.
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Outlier%202.png' style='background-color: #FFFFFF;' width= 500/>
 
 - ***Unvariate Analysis***
 
-  Karena target pada dataset ini adalah fitur *Close*, maka jika kita lihat korelasi pada fitur dataset tersebut pada visualisasi dibawah ini, dapat disimpulkan bahwa disini kenaikan harga dari kripto bitcoin sebanding dengan penurunan sampel data.
+  Karena target pada *dataset* ini adalah fitur *Close*, maka jika kita lihat korelasi pada fitur *dataset* tersebut pada visualisasi dibawah ini, dapat disimpulkan bahwa disini kenaikan harga dari kripto bitcoin sebanding dengan penurunan sampel data.
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Unvariate%20Analysis.png' style='background-color: #FFFFFF;' width=500/>
 
@@ -91,7 +91,7 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Multivariate%20Analysis%201.png' style='background-color: #FFFFFF;' width= 500/>
   
-  Disini dapat kita lihat secara detail korelasinya nya menggunakan angka, dapat kita lihat rata-rata korelasi yang ada dari fitur *Close* dengan fitur lain seperti *High, Low, Open* dan *Marketcap* itu mencapai angka 0.81, sedangkan volume mencapai angka 0.78, oleh karena itu dapat memungkinkan kita untuk menghapus fitur volume pada dataset ini.
+  Disini dapat kita lihat secara detail korelasinya nya menggunakan angka, dapat kita lihat rata-rata korelasi yang ada dari fitur *Close* dengan fitur lain seperti *High, Low, Open* dan *Marketcap* itu mencapai angka 0.81, sedangkan volume mencapai angka 0.78, oleh karena itu dapat memungkinkan kita untuk menghapus fitur volume pada *dataset* ini.
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Multivariate%20Analysis%202.png' style='background-color: #FFFFFF;' width= 500/>
 
@@ -112,7 +112,7 @@ Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan mod
 
 - ***Split Dataset***
 
-  Membagi dataset menjadi data latih **(x_train & y_train)** dan data uji **(x_test & y_test)** sebelum membuat model.Data latih adalah sekumpulan data yang akan digunakan oleh model untuk melakukan pelatihan. Sedangkan data uji adalah sekumpulan data yang akan digunakan untuk memvalidasi kinerja pada model yang telah dilatih. Karena data uji berperan sebagai data baru yang belum pernah dilihat oleh model, maka cara ini efektif untuk memeriksa performa model setelah proses pelatihan dilakukan. Proporsi pembagian dataset pada proyek ini menggunakan proporsi pembagian **80:20** yang berarti sebanyak **80% merupakan data latih** dan **20% persen merupakan data uji**.
+  Membagi *dataset* menjadi data latih **(x_*train* & y_*train*)** dan data uji **(x_*test* & y_*test*)** sebelum membuat model. Data latih adalah sekumpulan data yang akan digunakan oleh model untuk melakukan pelatihan. Sedangkan data uji adalah sekumpulan data yang akan digunakan untuk memvalidasi kinerja pada model yang telah dilatih. Karena data uji berperan sebagai data baru yang belum pernah dilihat oleh model, maka cara ini efektif untuk memeriksa performa model setelah proses pelatihan dilakukan. Proporsi pembagian *dataset* pada proyek ini menggunakan proporsi pembagian **80:20** yang berarti sebanyak **80% merupakan data latih** dan **20% persen merupakan data uji**.
 
 - **Normalisasi Data**
 
@@ -152,7 +152,7 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
 Model dengan solusi terbaik pada proyek ini adalah *Support Vector Regression* (*SVR*). Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya **(*K-Nearest Neighbours* (*KNN*) & *Random Forest Regression* (*RFR*))**
 
 # Evaluasi
-Evaluasi untuk proyek machine learning kali ini akan menggunakan metrik evaluasi *Mean Squared Error*(*MSE*). *MSE* terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur *error*. Analisis yang menghasilkan nilai *MSE* terkecil akan menghasilkan model terbaik.
+Evaluasi untuk proyek *machine learning* kali ini akan menggunakan metrik evaluasi *Mean Squared Error*(*MSE*). *MSE* terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur *error*. Analisis yang menghasilkan nilai *MSE* terkecil akan menghasilkan model terbaik.
 
 ![image](https://user-images.githubusercontent.com/75149615/205509058-451df508-0557-4443-af76-0ef7ce763de9.png)
 
