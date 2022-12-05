@@ -150,11 +150,11 @@ Model dengan solusi terbaik pada proyek ini adalah *Support Vector Regression* (
 # Evaluasi
 Evaluasi untuk proyek *machine learning* kali ini akan menggunakan metrik evaluasi *Mean Squared Error*(*MSE*). *MSE* terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur *error*. Analisis yang menghasilkan nilai *MSE* terkecil akan menghasilkan model terbaik.
 
-  $$ *MSE* = {\sum (Y_i-\check{Y}_i)^2 \over n} $$
+  $$ *MSE* = { \frac{\displaystyle \sum_{t=1}^n (At-Ft)^2} {n} } $$
 
 Dimana : 
-* ${Y_i}$ = Data Sebenarnya
-* ${\check{Y}_i}$ = Nilai prediksi dari variabel Y
+* $At$ = Data Sebenarnya
+* $Ft$ = Nilai prediksi dari variabel Y
 * $n$ = banyaknya observasi
 
 Setelah melakukan evaluasi menggunakan metrik *mean squared error* pada model dengan menggunakan data uji didapatkan hasil sebagai berikut:
