@@ -27,7 +27,7 @@ Tujuan dibuatnya proyek ini adalah sebagai berikut:
 - Melakukan persiapan pada data mata uang bitcoin agar dapat dengan mudah dipahami dengan baik oleh model *Machine Learning* yang dibuat.
 - Dapat memprediksi nilai mata uang bitcoin dengan akurat.
 
-## Solution statements
+### *Solution Statements*
 Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
 - Melakukan analisa pada data untuk dapat memahami data yang ada dengan menerapkan teknik visualisasi data. Analisa yang dapat dilakukan yaitu, antara lain:
   - Menangani missing value pada *dataset*.
