@@ -42,8 +42,8 @@ Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
   - Normalisasi dataset yang ada pada fitur numerik.
 - Membangun model yang dapat memprediksi bilangan kontinu sesuai dengan permasalahan yang ingin diselesaikan. Beberapa algoritma yang akan digunakan pada model regresi proyek ini yaitu, sebagai berikut:
   - Support Vector Regression (SVR)
-  - K-Nearest Neighbours (KNN)
   - Random Forest Regression (RFR)
+  - K-Nearest Neighbours (KNN)
 - Menerapkan teknik Grid Search untuk mendapatkan parameter-parameter dengan performa terbaik pada masing-masing model.
 
 ## Data Understanding
@@ -100,7 +100,15 @@ Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan mod
 
 - **Menghapus Data Yang Tidak Diperlukan**
 
-  Kolom data **Volume** dihapus karena memiliki korelasi yang rendah. Kemudian Kolom data seperti **(SNo, Name, Symbol, Date, Marketcap)** tidak diperlukan untuk pelatihan, karena data tersebut akan mengganggu model dalam mempelajari data. Karena isi dari data tersebut tidak memiliki value yang berarti untuk dipelajari oleh model.
+  Kolom data **Volume** dihapus karena memiliki korelasi yang rendah. Kemudian Kolom data seperti **(SNo, Name, Symbol, Date, Marketcap)** tidak diperlukan untuk pelatihan, karena data tersebut akan mengganggu model dalam mempelajari data. Karena isi dari data tersebut tidak memiliki value yang berarti untuk dipelajari oleh model. Sehingga data akan terlihat seperti ini:
+  
+  | High     | Low      | Open     | Close    |
+  |----------|----------|----------|----------|
+  | 147.488007 | 134.000000 | 134.444000 | 144.539993 |
+  | 146.929993 | 134.050003	| 144.000000 | 139.000000 |
+  | 139.889999 | 107.720001 | 139.000000 | 116.989998 |
+  | 125.599998 | 92.281898 | 116.379997 | 105.209999 |
+  | 108.127998 | 79.099998 | 106.250000 | 97.750000 |
 
 - **Split Dataset**
 
@@ -113,15 +121,6 @@ Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan mod
 # Modeling
 Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut: 
 
-- **K-Nearest Neighbours (KNN)**
-
-  Algoritma KNN merupakan algoritma klasifikasi yang bekerja dengan mengambil sejumlah K data terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru. Algoritma ini mengklasifikasikan data berdasarkan kesamaan atau kemiripan atau kedekatannya terhadap data lainnya. Algoritma KNN digunakan untuk klasifikasi dan regresi. Pada pembuatan model ini akan menggunaka modul KNN yang terlah di sediakan oleh *library scikit-learn*.  
-  
-  Cara kerja Algoritma KNN secara umum :
-  - Tentukan jumlah tetangga (K) yang akan digunakan untuk pertimbangan penentuan kelas.
-  - Hitung jarak dari data baru ke masing-masing data point pada dataset.
-  - Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut.
-  
 - **Support Vector Regression (SVR)**
 
   Algoritma supervised learning yang berguna untuk memprediksi dari nilai kontinu. tujuan dasarnya digunakan untuk menentukan garis keputusan yang sesuai. SVR akan mencoba menyesuaikan garis yang paling baik dalam nilai ambang batas.
@@ -140,6 +139,15 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
 - **Random Forest Regression (RFR)**
 
   Merupakan Algoritma yang fleksibel dan mudah untuk digunakan. “Forest” yang dibangunnya adalah kumpulan decision tree, biasanya dilatih dengan metode “bagging”. Ide umum dari metode bagging adalah kombinasi model pembelajaran meningkatkan hasil keseluruhan.
+
+- **K-Nearest Neighbours (KNN)**
+
+  Algoritma KNN merupakan algoritma klasifikasi yang bekerja dengan mengambil sejumlah K data terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru. Algoritma ini mengklasifikasikan data berdasarkan kesamaan atau kemiripan atau kedekatannya terhadap data lainnya. Algoritma KNN digunakan untuk klasifikasi dan regresi. Pada pembuatan model ini akan menggunaka modul KNN yang terlah di sediakan oleh *library scikit-learn*.  
+  
+  Cara kerja Algoritma KNN secara umum :
+  - Tentukan jumlah tetangga (K) yang akan digunakan untuk pertimbangan penentuan kelas.
+  - Hitung jarak dari data baru ke masing-masing data point pada dataset.
+  - Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut.
   
 Model dengan solusi terbaik pada proyek ini adalah Support Vector Regression (SVR). Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya **(K-Nearest Neighbours (KNN) & Random Forest Regression (RFR))**
 
