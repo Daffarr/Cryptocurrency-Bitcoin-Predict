@@ -68,7 +68,6 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
 
   Dapat dilihat pada visualisasi dibawah ini, *dataset* memiliki data *outlier* yang cukup banyak, maka untuk menghandle data *outlier* tersebut pada *dataset* ini akan menggunakan *IQR Method* yaitu dengan menghapus data yang berada diluar *interquartile range*. *Interquartile* sendiri adalah *range* yang berada diantara kuartil pertama(25%) dan kuartil ketiga(75%).
   
-  
   ![Visualisasi Outlier](https://user-images.githubusercontent.com/77198942/205610714-64b1946b-9d05-4dbf-b720-7c9d9fbeddab.png)
 
   Setelah melakukan penanganan *Outlier*, data yang ada di dalam *dataset* akan berkurang menjadi **2696 data**, karena data yang termasuk dalam *outlier* akan dihapus menggunakan *IQR Method*. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data *outlier* masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data *outlier* yang ada agar tidak mengurangi keberagaman dari *dataset* yang digunakan.
