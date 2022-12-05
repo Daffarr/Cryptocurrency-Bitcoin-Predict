@@ -1,6 +1,6 @@
 # *Cryptocurrency (Bitcoin) Predict* - Daffa Rayhan Riadi
 
-## Project Overview
+## *Project Overview*
 
 Saat ini telah banyak jenis mata uang kripto dan salah satu yang paling terkenal dan meningkati peringkat pertama saat ini adalah **Bitcoin**. **Bitcoin** adalah token Aset Kripto yang dapat digunakan dalam transaksi *peer-to-peer*, atau dibeli dan dijual di bursa dengan nilai spekulatif. **Bitcoin** dan pasar *cryptocurrency* lainnya dapat diperdagangkan setiap saat karena tidak memiliki periode tutup, inilah yang membedakannya dengan pasar lainnya. **Bitcoin** kadang berubah dan berisiko bagi para pedagang. 
 
