@@ -68,27 +68,27 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
 
   Dapat dilihat pada visualisasi dibawah ini, *dataset* memiliki data *outlier* yang cukup banyak, maka untuk menghandle data *outlier* tersebut pada *dataset* ini akan menggunakan *IQR Method* yaitu dengan menghapus data yang berada diluar *interquartile range*. *Interquartile* sendiri adalah *range* yang berada diantara kuartil pertama(25%) dan kuartil ketiga(75%).
   
-  ![Visualisasi Outlier](https://user-images.githubusercontent.com/77198942/205610714-64b1946b-9d05-4dbf-b720-7c9d9fbeddab.png)
+  <img src="https://user-images.githubusercontent.com/77198942/205610714-64b1946b-9d05-4dbf-b720-7c9d9fbeddab.png" style="background-color:#FFFF" width="500"/>
 
   Setelah melakukan penanganan *Outlier*, data yang ada di dalam *dataset* akan berkurang menjadi **2696 data**, karena data yang termasuk dalam *outlier* akan dihapus menggunakan *IQR Method*. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data *outlier* masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data *outlier* yang ada agar tidak mengurangi keberagaman dari *dataset* yang digunakan.
   
- ![Visualisasi Outlier 2](https://user-images.githubusercontent.com/77198942/205610755-2a164f9c-c8c5-4ea1-8054-9af3da491d4c.png)
+ <img src="https://user-images.githubusercontent.com/77198942/205610755-2a164f9c-c8c5-4ea1-8054-9af3da491d4c.png" style="background-color:#FFFF" width="500"/>
 
 - ***Unvariate Analysis***
 
   Karena target pada *dataset* ini adalah fitur *Close*, maka jika kita lihat korelasi pada fitur *dataset* tersebut pada visualisasi dibawah ini, dapat disimpulkan bahwa disini kenaikan harga dari kripto bitcoin sebanding dengan penurunan sampel data.
   
-  ![Visualisasi Unvariate Analysis](https://user-images.githubusercontent.com/77198942/205610797-cbb6f2b6-7cfc-4fbe-a8e3-f7329809bbfa.png)
+  <img src="https://user-images.githubusercontent.com/77198942/205610797-cbb6f2b6-7cfc-4fbe-a8e3-f7329809bbfa.png" style="background-color:#FFFF" width="500"/>
 
 - ***Multivariate Analysis***
 
   Melalui Visualisasi dibawah ini dapat kita lihat bahwa fitur close memiliki korelasi yang tinggi atau baik dengan beberapa fitur yang ada, yakni ***High, Low, Open* dan *Marketcap***. Sedangkan fitur **Volume** dapat kita lihat memiliki korelasi yang cukup rendah.
   
-  ![Visualisasi Multivariate Analysis 1](https://user-images.githubusercontent.com/77198942/205610845-c94d1eda-7dbc-41ce-b31e-318a03f8f588.png)
+  <img src="https://user-images.githubusercontent.com/77198942/205610845-c94d1eda-7dbc-41ce-b31e-318a03f8f588.png" style="background-color:#FFFF" width="500"/>
 
   Disini dapat kita lihat secara detail korelasinya nya menggunakan angka, dapat kita lihat rata-rata korelasi yang ada dari fitur *Close* dengan fitur lain seperti *High, Low, Open* dan *Marketcap* itu mencapai angka 0.81, sedangkan volume mencapai angka 0.78, oleh karena itu dapat memungkinkan kita untuk menghapus fitur volume pada *dataset* ini.
   
-  ![Visualisasi Multivariate Analysis 2](https://user-images.githubusercontent.com/77198942/205610892-c939e4d3-c17f-42e8-8315-30dcdbb57543.png)
+  <img src="https://user-images.githubusercontent.com/77198942/205610892-c939e4d3-c17f-42e8-8315-30dcdbb57543.png" style="background-color:#FFFF" width="500"/>
 
 ## *Data Preparation*
 Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan model:
@@ -164,7 +164,7 @@ Dimana :
 
 Setelah melakukan evaluasi menggunakan metrik *mean squared error* pada model dengan menggunakan data uji didapatkan hasil sebagai berikut:
 
-![Visualisasi Metrik mean_squared_error](https://user-images.githubusercontent.com/77198942/205601138-97a8d05b-8762-4e42-a467-bfe7b4647b40.png)
+<img src="https://user-images.githubusercontent.com/77198942/205601138-97a8d05b-8762-4e42-a467-bfe7b4647b40.png" style="background-color:#FFFF" width="500"/>
 
 Dari 3 model yang telah dijalankan, dapat dilihat dari visulisasi diatas bahwa *MSE* pada model ***Support Vector Regression* (*SVM*)** merupakan *MSE* yang paling rendah dari kedua model lainnya **(*K-Nearest Neighbours* (*KNN*) & *Random Forest Regression* (*RFR*))**, selain itu jumlah *error* pada saat pengujian tidak berbeda jauh dengan *error* pada saat pelatihan. Hasil ini dapat digunakan untuk membantu para *trader* khusunya pengguna kripto bitcoin Indonesia dalam melakukan transaksi di dalam dunia kripto.
 
