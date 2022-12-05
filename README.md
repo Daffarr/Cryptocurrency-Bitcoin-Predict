@@ -75,7 +75,7 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Outlier.png' style='background-color: #FFFFFF;' width= 500/>
   
-  Setelah melakukan penanganan Outlier, data yang ada di dalam dataset akan berkurang, karena data yang termasuk dalam outlier akan dihapus menggunakan Method IQR. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data outlier masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data outlier yang ada agar tidak mengurangi keberagaman dari dataset yang digunakan.
+  Setelah melakukan penanganan Outlier, data yang ada di dalam dataset akan berkurang menjadi **2696 data**, karena data yang termasuk dalam outlier akan dihapus menggunakan Method IQR. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data outlier masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data outlier yang ada agar tidak mengurangi keberagaman dari dataset yang digunakan.
   
   <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Outlier%202.png' style='background-color: #FFFFFF;' width= 500/>
 
