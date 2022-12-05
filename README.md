@@ -12,11 +12,6 @@ Saat melakukan prediksi, di perlukan metode yang tepat. Salah satunya adalah den
 
 Berdasarkan hal tersebut, maka dilakukan penelitian tentang prediksi harga **Bitcoin** menggunakan ***Machine Learning***. Proyek ***Machine Learning*** ini di buat agar dapat memprediksi harga pasar **Bitcoin** di masa mendatang. Dengan penerapan ***Machine Learning*** di harapkan dapat mengurangi tingkat kerugian akibat harga mata uang **Bitcoin** yang tidak stabil.
 
-  Referensi: 
-  1. [Prediksi Harga *Cryptocurrency* Menggunakan Algoritma *Long Short Term Memory* (*LSTM*)](http://www.jurnal.iaii.or.id/index.php/RESTI/article/view/3630).
-  2. [Prediksi Harga *Cryptocurrency* Dengan Metode *K-Nearest Neighbours*](http://ejournal.nusamandiri.ac.id/index.php/pilar/article/view/30).
-  3. [Dampak *Cryptocurrency* Terhadap Perekonomian Indonesia](https://jurnal.stmikroyal.ac.id/index.php/senar/article/view/227).
-
 ## *Business Understanding*
 ### *Problem Statements*
 Berdasarkan pada latar belakang diatas, permasalahan yang dapat diselesaikan pada proyek ini adalah sebagai berikut: 
@@ -166,3 +161,9 @@ Setelah melakukan evaluasi menggunakan metrik *mean squared error* pada model de
 ![Visualisasi Metrik mean_squared_error](https://user-images.githubusercontent.com/77198942/205601138-97a8d05b-8762-4e42-a467-bfe7b4647b40.png)
 
 Dari 3 model yang telah dijalankan, dapat dilihat dari visulisasi diatas bahwa *MSE* pada model ***Support Vector Regression* (*SVM*)** merupakan *MSE* yang paling rendah dari kedua model lainnya **(*K-Nearest Neighbours* (*KNN*) & *Random Forest Regression* (*RFR*))**, selain itu jumlah *error* pada saat pengujian tidak berbeda jauh dengan *error* pada saat pelatihan. Hasil ini dapat digunakan untuk membantu para *trader* khusunya pengguna kripto bitcoin Indonesia dalam melakukan transaksi di dalam dunia kripto.
+
+# References
+1. Fatah, H., & Subekti, A. (2018). PREDIKSI HARGA CRYPTOCURRENCY DENGAN METODE K-NEAREST NEIGHBOURS. Jurnal Pilar Nusa Mandiri, 14(2). https://doi.org/10.33480/pilar.v14i2.894
+2. Moch Farryz Rizkilloh, & Sri Widiyanesti. (2022). Prediksi Harga Cryptocurrency Menggunakan Algoritma Long Short Term Memory (LSTM). Jurnal RESTI (Rekayasa Sistem Dan Teknologi Informasi), 6(1). https://doi.org/10.29207/resti.v6i1.3630
+3. Saputra Endra. (2018). Dampak Cryptocurrency Terhadap Perekonomian Indonesia. Seminar Nasional Royal (SENAR).
+
