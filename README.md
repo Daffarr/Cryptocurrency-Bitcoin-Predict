@@ -153,9 +153,9 @@ Evaluasi untuk proyek *machine learning* kali ini akan menggunakan metrik evalua
   $$ *MSE* = {\sum (Y_i-\check{Y}_i)^2 \over n} $$
 
 Dimana : 
-* Yi = Data Sebenarnya
-* Ýi = Nilai prediksi dari variabel Y
-* n = banyaknya observasi
+* ${Y_i}$ = Data Sebenarnya
+* ${\check{Y}_i}$ = Nilai prediksi dari variabel Y
+* $n$ = banyaknya observasi
 
 Setelah melakukan evaluasi menggunakan metrik *mean squared error* pada model dengan menggunakan data uji didapatkan hasil sebagai berikut:
 
