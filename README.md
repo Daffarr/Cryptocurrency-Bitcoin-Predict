@@ -1,4 +1,4 @@
-# Bitcoin Predict - Daffa Rayhan Riadi
+# Cryptocurrency (Bitcoin) Predict - Daffa Rayhan Riadi
 
 ## Project Overview
 
