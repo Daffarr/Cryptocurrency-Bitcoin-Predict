@@ -68,27 +68,28 @@ Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada 
 
   Dapat dilihat pada visualisasi dibawah ini, *dataset* memiliki data *outlier* yang cukup banyak, maka untuk menghandle data *outlier* tersebut pada *dataset* ini akan menggunakan *IQR Method* yaitu dengan menghapus data yang berada diluar *interquartile range*. *Interquartile* sendiri adalah *range* yang berada diantara kuartil pertama(25%) dan kuartil ketiga(75%).
   
-  <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Outlier.png' style='background-color: #FFFFFF;' width= 500/>
   
+  ![Visualisasi Outlier](https://user-images.githubusercontent.com/77198942/205610714-64b1946b-9d05-4dbf-b720-7c9d9fbeddab.png)
+
   Setelah melakukan penanganan *Outlier*, data yang ada di dalam *dataset* akan berkurang menjadi **2696 data**, karena data yang termasuk dalam *outlier* akan dihapus menggunakan *IQR Method*. Dapat kita lihat visualisasi dibawah ini memperlihatkan bahwa data *outlier* masih ada walaupun sedikit. Disini kita tidak akan menghapus lagi data *outlier* yang ada agar tidak mengurangi keberagaman dari *dataset* yang digunakan.
   
-  <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Outlier%202.png' style='background-color: #FFFFFF;' width= 500/>
+ ![Visualisasi Outlier 2](https://user-images.githubusercontent.com/77198942/205610755-2a164f9c-c8c5-4ea1-8054-9af3da491d4c.png)
 
 - ***Unvariate Analysis***
 
   Karena target pada *dataset* ini adalah fitur *Close*, maka jika kita lihat korelasi pada fitur *dataset* tersebut pada visualisasi dibawah ini, dapat disimpulkan bahwa disini kenaikan harga dari kripto bitcoin sebanding dengan penurunan sampel data.
   
-  <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Unvariate%20Analysis.png' style='background-color: #FFFFFF;' width=500/>
+  ![Visualisasi Unvariate Analysis](https://user-images.githubusercontent.com/77198942/205610797-cbb6f2b6-7cfc-4fbe-a8e3-f7329809bbfa.png)
 
 - ***Multivariate Analysis***
 
   Melalui Visualisasi dibawah ini dapat kita lihat bahwa fitur close memiliki korelasi yang tinggi atau baik dengan beberapa fitur yang ada, yakni ***High, Low, Open* dan *Marketcap***. Sedangkan fitur **Volume** dapat kita lihat memiliki korelasi yang cukup rendah.
   
-  <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Multivariate%20Analysis%201.png' style='background-color: #FFFFFF;' width= 500/>
-  
+  ![Visualisasi Multivariate Analysis 1](https://user-images.githubusercontent.com/77198942/205610845-c94d1eda-7dbc-41ce-b31e-318a03f8f588.png)
+
   Disini dapat kita lihat secara detail korelasinya nya menggunakan angka, dapat kita lihat rata-rata korelasi yang ada dari fitur *Close* dengan fitur lain seperti *High, Low, Open* dan *Marketcap* itu mencapai angka 0.81, sedangkan volume mencapai angka 0.78, oleh karena itu dapat memungkinkan kita untuk menghapus fitur volume pada *dataset* ini.
   
-  <image src='https://github.com/Daffarr/proyek1MLTerapan/blob/main/Visualisasi/Visualisasi%20Multivariate%20Analysis%202.png' style='background-color: #FFFFFF;' width= 500/>
+  ![Visualisasi Multivariate Analysis 2](https://user-images.githubusercontent.com/77198942/205610892-c939e4d3-c17f-42e8-8315-30dcdbb57543.png)
 
 ## *Data Preparation*
 Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan model:
@@ -149,7 +150,7 @@ Model dengan solusi terbaik pada proyek ini adalah *Support Vector Regression* (
 # Evaluasi
 Evaluasi untuk proyek *machine learning* kali ini akan menggunakan metrik evaluasi *Mean Squared Error*(*MSE*). *MSE* terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur *error*. Analisis yang menghasilkan nilai *MSE* terkecil akan menghasilkan model terbaik.
 
-![image](https://user-images.githubusercontent.com/75149615/205509058-451df508-0557-4443-af76-0ef7ce763de9.png)
+$$ *MSE* = {\sum (Y_i-Ý_i)^2 / n} $$
 
 Dimana : 
 * Yi = Data Sebenarnya
