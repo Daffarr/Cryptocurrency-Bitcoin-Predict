@@ -119,9 +119,9 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
 - ***Support Vector Regression* (*SVR*)**
 
   Algoritma *supervised learning* yang berguna untuk memprediksi dari nilai kontinu. tujuan dasarnya digunakan untuk menentukan garis keputusan yang sesuai. *SVR* akan mencoba menyesuaikan garis yang paling baik dalam nilai ambang batas. Untuk hyper parameter yang digunakan pada model ini adalah sebagai berikut :
-  - *`kernel`* = *`rfr`*, Parameter ini merupakan metode yang digunakan untuk mengambil data sebagai input dan mengubahnya menjadi bentuk pemrosesan data yang diperlukan.
-  - *`C`* = `100000`, Parameter C menukar klasifikasi yang benar dari contoh pelatihan terhadap maksimalisasi *margin* fungsi keputusan. Untuk nilai C yang lebih besar, *margin* yang lebih kecil akan diterima jika fungsi keputusan lebih baik dalam mengklasifikasikan semua titik pelatihan dengan benar. C yang lebih rendah akan mendorong *margin* yang lebih besar, oleh karena itu fungsi keputusan yang lebih sederhana, dengan mengorbankan akurasi pelatihan. Dengan kata lain C berperilaku sebagai parameter regularisasi dalam *SVR*.
-  - *`gamma`* = `0.3`, Secara intuitif, parameter *gamma* menentukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti 'jauh' dan nilai tinggi berarti 'dekat'. Parameter *gamma* dapat dilihat sebagai kebalikan dari radius pengaruh sampel yang dipilih oleh model sebagai vektor pendukung.
+  - *`kernel`* = *`rfr`*, Parameter ini adalah metode yang digunakan untuk mengambil data sebagai input dan mengubahnya menjadi bentuk pemrosesan data yang diperlukan.
+  - *`C`* = `100000`, Parameter C ini menukar klasifikasi yang benar dari contoh pelatihan terhadap maksimalisasi *margin* fungsi keputusan. Untuk nilai C yang lebih besar, *margin* yang lebih kecil akan diterima jika fungsi keputusan lebih baik dalam mengklasifikasikan semua titik pelatihan dengan benar. C yang lebih rendah akan mendorong *margin* yang lebih besar, oleh karena itu fungsi keputusan yang lebih sederhana, dengan mengorbankan akurasi pelatihan. Dengan kata lain C berperilaku sebagai parameter regularisasi dalam *SVR*.
+  - *`gamma`* = `0.3`, Parameter ini secara intuitif, parameter *gamma* menentukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti 'jauh' dan nilai tinggi berarti 'dekat'. Parameter *gamma* dapat dilihat sebagai kebalikan dari radius pengaruh sampel yang dipilih oleh model sebagai vektor pendukung.
 
   Kelebihan:
   - Model keputusan mudah untuk diperbarui.
@@ -137,8 +137,8 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
 - ***Random Forest Regression* (*RFR*)**
 
   Merupakan Algoritma yang fleksibel dan mudah untuk digunakan. “*Forest*” yang dibangunnya adalah kumpulan *decision tree*, biasanya dilatih dengan metode “*bagging*”. Ide umum dari metode *bagging* adalah kombinasi model pembelajaran meningkatkan hasil keseluruhan. Untuk hyperparameter yang digunakan pada model ini adalah sebagai berikut:
-  - *`n_estimator`* = `6` jumlah *trees* (pohon) di *forest*.
-  - *`max_depth`* = `16` kedalaman atau panjang pohon. Ia merupakan ukuran seberapa banyak pohon dapat membelah (*splitting*) untuk membagi setiap *node* ke dalam jumlah pengamatan yang diinginkan.
+  - *`n_estimator`* = `6`, Parameter ini adalah jumlah *trees* (pohon) di *forest*.
+  - *`max_depth`* = `16`, Parameter ini adalah kedalaman atau panjang pohon. Ia merupakan ukuran seberapa banyak pohon dapat membelah (*splitting*) untuk membagi setiap *node* ke dalam jumlah pengamatan yang diinginkan.
 
 - ***K-Nearest Neighbours* (*KNN*)**
 
