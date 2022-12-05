@@ -150,7 +150,7 @@ Model dengan solusi terbaik pada proyek ini adalah *Support Vector Regression* (
 # Evaluasi
 Evaluasi untuk proyek *machine learning* kali ini akan menggunakan metrik evaluasi *Mean Squared Error*(*MSE*). *MSE* terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur *error*. Analisis yang menghasilkan nilai *MSE* terkecil akan menghasilkan model terbaik.
 
-$$ *MSE* = {\sum (Y_i-Ý_i)^2 / n} $$
+  $$ *MSE* = {\sum (Y_i-\check{Y}_i)^2 \over n} $$
 
 Dimana : 
 * Yi = Data Sebenarnya
