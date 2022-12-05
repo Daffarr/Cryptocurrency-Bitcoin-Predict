@@ -169,6 +169,9 @@ Setelah melakukan evaluasi menggunakan metrik *mean squared error* pada model de
 
 Dari 3 model yang telah dijalankan, dapat dilihat dari visulisasi diatas bahwa *MSE* pada model ***Support Vector Regression* (*SVM*)** merupakan *MSE* yang paling rendah dari kedua model lainnya **(*K-Nearest Neighbours* (*KNN*) & *Random Forest Regression* (*RFR*))**, selain itu jumlah *error* pada saat pengujian tidak berbeda jauh dengan *error* pada saat pelatihan. Hasil ini dapat digunakan untuk membantu para *trader* khusunya pengguna kripto bitcoin Indonesia dalam melakukan transaksi di dalam dunia kripto.
 
+# Conclusion
+Kesimpulan dari beberapa pembahasan diatas berdasarkan proyek yang sudah dijalankan, dapat diketahui bahwa Model ***Support Vector Regression* (*SVM*)** adalah yang paling baik dari model yang lainnya.
+
 # References
 1. Fatah, H., & Subekti, A. (2018). PREDIKSI HARGA CRYPTOCURRENCY DENGAN METODE K-NEAREST NEIGHBOURS. Jurnal Pilar Nusa Mandiri, 14(2). https://doi.org/10.33480/pilar.v14i2.894
 2. Moch Farryz Rizkilloh, & Sri Widiyanesti. (2022). Prediksi Harga Cryptocurrency Menggunakan Algoritma Long Short Term Memory (LSTM). Jurnal RESTI (Rekayasa Sistem Dan Teknologi Informasi), 6(1). https://doi.org/10.29207/resti.v6i1.3630
