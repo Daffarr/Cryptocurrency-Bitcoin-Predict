@@ -152,7 +152,7 @@ Model atau Algoritma yang digunakan pada proyek ini adalah sebagai berikut:
   
 Model dengan solusi terbaik pada proyek ini adalah *Support Vector Regression* (*SVR*). Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya **(*K-Nearest Neighbours* (*KNN*) & *Random Forest Regression* (*RFR*))**
 
-# Evaluasi
+# *Evaluation*
 Evaluasi untuk proyek *machine learning* kali ini akan menggunakan metrik evaluasi *Mean Squared Error*(*MSE*). *MSE* terdiri atas 2 komponen yaitu bias dan varians. Untuk menentukan uji kebenaran, maka dilakukan dengan mengukur *error*. Analisis yang menghasilkan nilai *MSE* terkecil akan menghasilkan model terbaik.
 
   $$ *MSE* = { \frac{\displaystyle \sum_{t=1}^n (At-Ft)^2} {n} } $$
